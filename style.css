@@ -9,13 +9,13 @@ body {
   align-items: center;
   justify-content: center;
   background: linear-gradient(270deg, #001f3f, #0074D9);
-  background-size: 400% 400%;
-  animation: gradientBG 20s ease infinite;
+  background-size: 600% 600%;
+  animation: gradientBG 30s linear infinite;
 }
+
 @keyframes gradientBG {
-  0%   { background-position: 0% 50%; }
-  50%  { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+  0%   { background-position: 0% 0%; }
+  100% { background-position: 100% 100%; }
 }
 .landing-container {
   display: flex;
