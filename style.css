@@ -21,7 +21,7 @@ body, html {
 
 /* White vertical card */
 .card {
-    background-color: white; /* Pure white */
+    background-color: white; /* Solid white card */
     border-radius: 20px;
     box-shadow: 0 15px 40px rgba(0,0,0,0.2);
     padding: 40px 30px;
@@ -54,7 +54,7 @@ p {
     color: #333;
 }
 
-/* Green rounded fancy button */
+/* Green rounded redirect button */
 button {
     background-color: #28a745;
     color: white;
@@ -71,12 +71,4 @@ button:hover {
     transform: translateY(-3px);
     box-shadow: 0 10px 20px rgba(0,0,0,0.3);
     background-color: #218838; /* Darker green on hover */
-}
-
-/* Hidden message */
-.hidden {
-    display: none;
-    margin-top: 15px;
-    color: #2ECC40;
-    font-weight: bold;
 }
