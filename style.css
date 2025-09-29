@@ -1,85 +1,117 @@
-/* Full screen background with flex centering */
-body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    /* Smooth animated blue gradient background */
-    background: linear-gradient(-45deg, #001f3f, #004080, #0059b3, #0074D9);
-    background-size: 300% 300%;
-    animation: gradientBG 12s ease infinite;
+/* reset / box sizing */
+* { box-sizing: border-box; }
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial;
 }
 
-/* Gradient animation */
+/* place content centered */
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* fallback color if gradient fails */
+  background-color: #001f3f;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* FULLSCREEN animated gradient layer behind everything */
+body::before {
+  content: "";
+  position: fixed;    /* fixed so it always covers viewport */
+  inset: 0;           /* top:0; right:0; bottom:0; left:0; */
+  z-index: -1;        /* behind page content */
+  background: linear-gradient(135deg, #001f3f, #004080, #0074D9);
+  background-size: 200% 200%;
+  animation: gradientBG 10s ease infinite;
+  will-change: background-position;
+}
+
+/* gradient animation */
 @keyframes gradientBG {
-    0%   { background-position: 0% 50%; }
-    50%  { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
-/* Container holds the card */
+/* container to center the white card */
 .landing-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px; /* keep spacing on small screens */
 }
 
-/* White vertical card */
+/* WHITE card */
 .card {
-    background-color: white; /* Solid white card */
-    border-radius: 20px;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
-    padding: 40px 30px;
-    text-align: center;
-    max-width: 350px;
-    width: 90%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  background: #ffffff;               /* pure white */
+  border-radius: 18px;
+  max-width: 420px;
+  width: 92%;
+  padding: 36px 28px;
+  text-align: center;
+  box-shadow: 0 18px 50px rgba(2,10,30,0.35);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-/* Icon styling */
+/* icon */
 .icon {
-    width: 100px;
-    height: 100px;
-    margin-bottom: 20px;
+  width: 96px;
+  height: 96px;
+  object-fit: contain;
+  margin-bottom: 18px;
 }
 
-/* Headline */
+/* headline + text */
 h1 {
-    font-size: 2rem;
-    margin-bottom: 15px;
-    color: #111;
+  margin: 6px 0 12px;
+  font-size: 1.9rem;
+  color: #0b0b0b;
+  line-height: 1.05;
 }
 
-/* Description */
-p {
-    font-size: 1.1rem;
-    margin-bottom: 25px;
-    color: #333;
+.desc {
+  margin: 0 0 26px;
+  color: #444;
+  font-size: 1.02rem;
+  line-height: 1.4;
 }
 
-/* Green rounded redirect button */
-button {
-    background-color: #28a745;
-    color: white;
-    border: none;
-    padding: 15px 35px;
-    font-size: 1.2rem;
-    cursor: pointer;
-    border-radius: 50px; /* Fully rounded */
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-    transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+/* styled green rounded CTA button */
+.btn {
+  -webkit-appearance: none;
+  appearance: none;
+  border: none;
+  display: inline-block;
+  background: linear-gradient(180deg, #34c759, #28a745);
+  color: #fff;
+  padding: 14px 38px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  border-radius: 999px; /* pill */
+  cursor: pointer;
+  box-shadow: 0 12px 30px rgba(40,167,69,0.18), inset 0 -3px 6px rgba(0,0,0,0.06);
+  transition: transform 0.16s ease, box-shadow 0.16s ease;
 }
 
-button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
-    background-color: #218838; /* Darker green on hover */
+/* hover / active */
+.btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(40,167,69,0.22), inset 0 -3px 6px rgba(0,0,0,0.06);
+}
+.btn:active {
+  transform: translateY(-1px) scale(.995);
+}
+
+/* responsive tweaks */
+@media (max-width: 380px) {
+  .card { padding: 26px 18px; }
+  h1 { font-size: 1.5rem; }
+  .btn { padding: 12px 28px; font-size: 1rem; }
 }
