@@ -1,55 +1,18 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Special Discount</title>
-  <link rel="stylesheet" href="style.css">
-  <meta name="description" content="Simple responsive business landing page.">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Special Offer</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <main class="container">
-    <div class="card">
-      <div class="icon" aria-hidden="true">
-        <svg viewBox="0 0 64 64" width="72" height="72" xmlns="http://www.w3.org/2000/svg" role="img" focusable="false">
-          <defs>
-            <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
-              <stop offset="0" stop-color="white" stop-opacity="0.95"/>
-              <stop offset="1" stop-color="white" stop-opacity="0.6"/>
-            </linearGradient>
-          </defs>
-          <rect rx="12" width="64" height="64" fill="rgba(255,255,255,0.06)"/>
-          <path d="M32 14a10 10 0 1 0 0 20 10 10 0 0 0 0-20zM20 44c0-6 12-8 12-8s12 2 12 8v4H20v-4z" fill="url(#g)"/>
-        </svg>
-      </div>
-      <h1>Special Discount</h1>
-      <p class="lead">Fast. Simple. Limited time.</p>
-      <ol class="steps">
-        <li>
-          <div class="step-index">1</div>
-          <div class="step-body">
-            <div class="step-title">Join</div>
-            <div class="step-desc">Create your free account in seconds</div>
-          </div>
-        </li>
-        <li>
-          <div class="step-index">2</div>
-          <div class="step-body">
-            <div class="step-title">Select</div>
-            <div class="step-desc">Choose the plan that fits you</div>
-          </div>
-        </li>
-        <li>
-          <div class="step-index">3</div>
-          <div class="step-body">
-            <div class="step-title">Save</div>
-            <div class="step-desc">Enjoy instant savings and perks</div>
-          </div>
-        </li>
-      </ol>
-      <a id="cta" class="btn" href="#">Get Started</a>
+    <div class="landing-container">
+        <h1>🎉 Get 60% Off Today!</h1>
+        <p>Limited-time offer on all our products. Don’t miss out!</p>
+        <button id="claimButton">Claim Discount</button>
+        <p id="message" class="hidden">Discount claimed! Check your email for the code.</p>
     </div>
-  </main>
-  <script src="script.js" defer></script>
+    <script src="script.js"></script>
 </body>
 </html>
