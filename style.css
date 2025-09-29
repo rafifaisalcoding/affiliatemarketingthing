@@ -21,7 +21,7 @@ body, html {
 
 /* White vertical card */
 .card {
-    background-color: white;
+    background-color: white; /* solid white */
     border-radius: 20px;
     box-shadow: 0 15px 40px rgba(0,0,0,0.2);
     padding: 40px 30px;
@@ -53,20 +53,21 @@ p {
     color: #333;
 }
 
-/* Fancy button */
+/* Stylized green button */
 button {
-    background: linear-gradient(45deg, #FF6B6B, #FFB86B);
+    background: #28a745; /* green */
     color: white;
     border: none;
     padding: 15px 35px;
     font-size: 1.2rem;
     cursor: pointer;
-    border-radius: 50px;
+    border-radius: 50px; /* fully rounded */
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-    transition: transform 0.2s, box-shadow 0.2s;
+    transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
 }
 
 button:hover {
+    background: #218838; /* darker green on hover */
     transform: translateY(-3px);
     box-shadow: 0 10px 20px rgba(0,0,0,0.3);
 }
