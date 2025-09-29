@@ -7,68 +7,22 @@ body, html {
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: background 1s linear;
+
+    /* Smooth blue gradient animation */
+    background: linear-gradient(135deg, #001f3f, #0074D9);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
 }
 
-/* Container holds the card */
-.landing-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-}
-
-/* White vertical card */
-.card {
-    background-color: white; /* Solid white card */
-    border-radius: 20px;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
-    padding: 40px 30px;
-    text-align: center;
-    max-width: 350px;
-    width: 90%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-/* Icon styling */
-.icon {
-    width: 100px;
-    height: 100px;
-    margin-bottom: 20px;
-}
-
-/* Headline */
-h1 {
-    font-size: 2rem;
-    margin-bottom: 15px;
-    color: #111;
-}
-
-/* Description */
-p {
-    font-size: 1.1rem;
-    margin-bottom: 25px;
-    color: #333;
-}
-
-/* Green rounded redirect button */
-button {
-    background-color: #28a745;
-    color: white;
-    border: none;
-    padding: 15px 35px;
-    font-size: 1.2rem;
-    cursor: pointer;
-    border-radius: 50px; /* Fully rounded */
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-    transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
-}
-
-button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
-    background-color: #218838; /* Darker green on hover */
+/* Animate the background */
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
