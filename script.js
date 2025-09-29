@@ -1,19 +1,16 @@
 const button = document.getElementById('claimButton');
-const message = document.getElementById('message');
 
-// Button click
+// Redirect to a URL when clicked
 button.addEventListener('click', () => {
-    message.classList.remove('hidden');
-    button.disabled = true;
-    button.textContent = "Discount Claimed!";
+    window.location.href = "https://example.com"; // <-- replace with your link
 });
 
-// Smooth gradient background cycling behind the card
+// Smooth blue gradient background cycling
 const colors = [
-    "linear-gradient(135deg, #FF9A9E, #FAD0C4)",
-    "linear-gradient(135deg, #A18CD1, #FBC2EB)",
-    "linear-gradient(135deg, #84FAB0, #8FD3F4)",
-    "linear-gradient(135deg, #FFDEE9, #B5FFFC)"
+    "linear-gradient(135deg, #0074D9, #001f3f)", 
+    "linear-gradient(135deg, #1E90FF, #001f3f)", 
+    "linear-gradient(135deg, #3399FF, #001f3f)", 
+    "linear-gradient(135deg, #00AEEF, #001f3f)"
 ];
 
 let i = 0;
