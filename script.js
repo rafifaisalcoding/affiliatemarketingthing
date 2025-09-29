@@ -8,7 +8,7 @@ button.addEventListener('click', () => {
     button.textContent = "Discount Claimed!";
 });
 
-// Smooth gradient background cycling
+// Smooth gradient background cycling behind the card
 const colors = [
     "linear-gradient(135deg, #FF9A9E, #FAD0C4)",
     "linear-gradient(135deg, #A18CD1, #FBC2EB)",
