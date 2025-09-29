@@ -6,30 +6,18 @@ html, body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial;
 }
 
-/* place content centered */
+/* place content centered with animated gradient */
 body {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* fallback color if gradient fails */
-  background-color: #001f3f;
-  position: relative;
-  overflow-x: hidden;
-}
 
-/* FULLSCREEN animated gradient layer behind everything */
-body::before {
-  content: "";
-  position: fixed;    /* fixed so it always covers viewport */
-  inset: 0;           /* top:0; right:0; bottom:0; left:0; */
-  z-index: -1;        /* behind page content */
+  /* animated blue gradient */
   background: linear-gradient(135deg, #001f3f, #004080, #0074D9);
   background-size: 200% 200%;
   animation: gradientBG 10s ease infinite;
-  will-change: background-position;
 }
 
-/* gradient animation */
 @keyframes gradientBG {
   0%   { background-position: 0% 50%; }
   50%  { background-position: 100% 50%; }
@@ -38,17 +26,17 @@ body::before {
 
 /* container to center the white card */
 .landing-container {
-  width: 100%;
-  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 24px; /* keep spacing on small screens */
+  width: 100%;
+  min-height: 100vh;
+  padding: 24px;
 }
 
 /* WHITE card */
 .card {
-  background: #ffffff;               /* pure white */
+  background: #ffffff; /* solid white */
   border-radius: 18px;
   max-width: 420px;
   width: 92%;
@@ -84,28 +72,27 @@ h1 {
 }
 
 /* styled green rounded CTA button */
-.btn {
+button {
   -webkit-appearance: none;
   appearance: none;
   border: none;
-  display: inline-block;
   background: linear-gradient(180deg, #34c759, #28a745);
   color: #fff;
   padding: 14px 38px;
   font-size: 1.05rem;
   font-weight: 600;
-  border-radius: 999px; /* pill */
+  border-radius: 999px;
   cursor: pointer;
   box-shadow: 0 12px 30px rgba(40,167,69,0.18), inset 0 -3px 6px rgba(0,0,0,0.06);
   transition: transform 0.16s ease, box-shadow 0.16s ease;
 }
 
-/* hover / active */
-.btn:hover {
+button:hover {
   transform: translateY(-4px);
   box-shadow: 0 20px 40px rgba(40,167,69,0.22), inset 0 -3px 6px rgba(0,0,0,0.06);
 }
-.btn:active {
+
+button:active {
   transform: translateY(-1px) scale(.995);
 }
 
@@ -113,5 +100,5 @@ h1 {
 @media (max-width: 380px) {
   .card { padding: 26px 18px; }
   h1 { font-size: 1.5rem; }
-  .btn { padding: 12px 28px; font-size: 1rem; }
+  button { padding: 12px 28px; font-size: 1rem; }
 }
