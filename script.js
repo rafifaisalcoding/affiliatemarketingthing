@@ -1,7 +1,7 @@
 const button = document.getElementById('claimButton');
 
 button.addEventListener('click', () => {
-    window.location.href = "https://rickrolled.com/";
+    window.location.href = "https://rickrolled.com";
 });
 
 const colors = [
