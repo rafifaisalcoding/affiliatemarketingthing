@@ -1,11 +1,9 @@
 const button = document.getElementById('claimButton');
 
-// Redirect to a URL when clicked
 button.addEventListener('click', () => {
-    window.location.href = "https://example.com"; // <-- replace with your link
+    window.location.href = "https://example.com";
 });
 
-// Smooth blue gradient background cycling
 const colors = [
     "linear-gradient(135deg, #0074D9, #001f3f)", 
     "linear-gradient(135deg, #1E90FF, #001f3f)", 
