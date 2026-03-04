@@ -5,10 +5,10 @@ button.addEventListener('click', () => {
 });
 
 const colors = [
-    "linear-gradient(135deg, #0074D9, #001f3f)", 
-    "linear-gradient(135deg, #1E90FF, #001f3f)", 
-    "linear-gradient(135deg, #3399FF, #001f3f)", 
-    "linear-gradient(135deg, #00AEEF, #001f3f)"
+    "linear-gradient(135deg, #FF851B, #000000)", 
+    "linear-gradient(135deg, #FFA500, #000000)", 
+    "linear-gradient(135deg, #FF7F50, #000000)", 
+    "linear-gradient(135deg, #FF4500, #000000)"
 ];
 
 let i = 0;
