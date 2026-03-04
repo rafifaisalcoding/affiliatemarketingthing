@@ -1,7 +1,7 @@
 const button = document.getElementById('claimButton');
 
 button.addEventListener('click', () => {
-    window.location.href = "https://rickrolled.com";
+    window.location.href = "https://gloffers.org/aff_c?offer_id=340&aff_id=88356";
 });
 
 const colors = [
