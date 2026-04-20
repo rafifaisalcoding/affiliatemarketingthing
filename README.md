@@ -1,1 +1,1 @@
-This is a personal project. In my interests with some experience with affiliate marketing, I have created a website as a "landing page". The website is no longer operational, however, people across the Internet may use it as is. 
+This is a personal project. In my interests with some experience with affiliate marketing, I have created a website as a "landing page". The website is no longer operational, however, people across the Internet may use it as is. This is more of a personal project, being my 2nd most ever made project.
