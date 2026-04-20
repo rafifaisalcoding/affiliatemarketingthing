@@ -1,7 +1,7 @@
 const button = document.getElementById('claimButton');
 
 button.addEventListener('click', () => {
-    window.location.href = "https://trksy.org/aff_c?offer_id=340&aff_id=88356";
+    window.location.href = "https://example.com";
 });
 
 const colors = [
